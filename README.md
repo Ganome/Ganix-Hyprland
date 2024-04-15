@@ -2,6 +2,7 @@
 
 # MAINTENANCE MODE!
 ### ZaneyOS is currently being updated and fixed. This is a volatile time to install or update. If you have problems reach out on Discord.
+### This rendition has the split-monitor-workspaces installed from Duckonaut https://github.com/Duckonaut/split-monitor-workspaces
 
 ## ZaneyOS 🟰 Best ❄️ NixOS Configs
 
