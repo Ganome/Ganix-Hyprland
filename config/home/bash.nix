@@ -25,7 +25,7 @@ lib.mkIf (theShell == "bash") {
     };
     shellAliases = {
       sv="sudo nvim";
-      flake-rebuild="nh os switch --hostname ${hostname}";
+      flake-rebuild="sudo nixos-rebuild switch --flake #${hostname}";
       flake-update="nh os switch --hostname ${hostname} --update";
       gcCleanup="nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       v="nvim";

@@ -124,6 +124,11 @@ in with lib; {
       exec-once = wallsetter
       exec-once = nm-applet --indicator
       exec-once = swayidle -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'
+
+      #Clipboard history with Super+V
+      exec-once = wl-paste --type text --watch cliphist store 
+      exec-once = wl-paste --type image --watch cliphist store
+
       dwindle {
         pseudotile = true
         preserve_split = true
@@ -149,22 +154,16 @@ in with lib; {
       bind = ${modifier},F,fullscreen,
       bind = ${modifier}SHIFT,SPACE,togglefloating,
       bind = ${modifier}SHIFT,E,exit,
-#      bind = ${modifier}SHIFT,left,movewindow,l
-#      bind = ${modifier}SHIFT,right,movewindow,r
-#      bind = ${modifier}SHIFT,up,movewindow,u
-#      bind = ${modifier}SHIFT,down,movewindow,d
-#      bind = ${modifier}SHIFT,h,movewindow,l
-#      bind = ${modifier}SHIFT,l,movewindow,r
-#      bind = ${modifier}SHIFT,k,movewindow,u
-#      bind = ${modifier}SHIFT,j,movewindow,d
-#      bind = ${modifier},left,movefocus,l
-#      bind = ${modifier},right,movefocus,r
-#      bind = ${modifier},up,movefocus,u
-#      bind = ${modifier},down,movefocus,d
-#      bind = ${modifier},h,movefocus,l
-#      bind = ${modifier},l,movefocus,r
-#      bind = ${modifier},k,movefocus,u
-#      bind = ${modifier},j,movefocus,d
+      
+      #Waybar
+      bind = ${modifier}, B, exec, pkill --signal 10 waybar
+      bind = ${modifier}SHIFT, B, exec, /usr/local/bin/reset-waybar
+
+      # Special Workspaces - like scrathpad, but singular
+      bind = ${modifier}SHIFT,MINUS,movetoworkspace,special
+      bind = ${modifier},MINUS,togglespecialworkspace
+      
+      #Navigation
       bind = ${modifier},1,split-workspace,1
       bind = ${modifier},2,split-workspace,2
       bind = ${modifier},3,split-workspace,3
@@ -175,8 +174,6 @@ in with lib; {
       bind = ${modifier},8,split-workspace,8
       bind = ${modifier},9,split-workspace,9
       bind = ${modifier},0,split-workspace,10
-      bind = ${modifier}SHIFT,MINUS,movetoworkspace,special
-      bind = ${modifier},MINUS,togglespecialworkspace
       bind = ${modifier}SHIFT,1,split-movetoworkspace,1
       bind = ${modifier}SHIFT,2,split-movetoworkspace,2
       bind = ${modifier}SHIFT,3,split-movetoworkspace,3
@@ -187,8 +184,7 @@ in with lib; {
       bind = ${modifier}SHIFT,8,split-movetoworkspace,8
       bind = ${modifier}SHIFT,9,split-movetoworkspace,9
       bind = ${modifier}SHIFT,0,split-movetoworkspace,10
-      #Move active workspace to other monitor
-      bind = ${modifier}SUPERCTRL, right, split-changemonitor, next
+      bind = ${modifier}SUPERCTRL, right, split-changemonitor, next #Move active workspace to other monitor
       bind = ${modifier}SUPERCTRL, left, split-changemonitor, prev
       bind = ${modifier},mouse_down,workspace, e+1
       bind = ${modifier},mouse_up,workspace, e-1
@@ -196,6 +192,8 @@ in with lib; {
       bindm = ${modifier},mouse:273,resizewindow
       bind = ALT,Tab,cyclenext
       bind = ALT,Tab,bringactivetotop
+      
+      #Volume Control
       bind = ,XF86AudioRaiseVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
       bind = ,XF86AudioLowerVolume,exec,wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
       binde = ,XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
@@ -203,8 +201,17 @@ in with lib; {
       bind = ,XF86AudioPause, exec, playerctl play-pause
       bind = ,XF86AudioNext, exec, playerctl next
       bind = ,XF86AudioPrev, exec, playerctl previous
+
+      #Clipboard Shortcuts
+      bind = SUPER, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy
+
+      #Monitor Brightness
       bind = ,XF86MonBrightnessDown,exec,brightnessctl set 5%-
       bind = ,XF86MonBrightnessUp,exec,brightnessctl set +5%
+
+      #Keyboard Brightness
+      bind = ,XF86KbdBrightnessUp, exec, brightnessctl -d *::kbd_backlight set +20%
+      bind = ,XF86KbdBrightnessDown, exec, brightnessctl -d *::kbd_backlight set 20%-
     '' ];
   };
 }
