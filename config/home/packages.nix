@@ -8,11 +8,12 @@ in {
   home.packages = with pkgs; [
     pkgs."${browser}" webcord-vencord libvirt swww grim grimblast slurp gnome.file-roller
     swaynotificationcenter rofi-wayland imv transmission-gtk mpv
-    gimp obs-studio rustup audacity pavucontrol tree protonup-qt
+    gimp rustup audacity pavucontrol tree protonup-qt
     spotify swayidle neovide swaylock quasselClient helvum tldr
     asciiquarium-transparent cmatrix geany cliphist font-awesome
-    dtach sxiv lsof wofi fortune cpu-x mangohud
-#    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    dtach sxiv lsof wofi fortune mangohud cpu-x fuse amf-headers 
+    (pkgs.wrapOBS { plugins = [ pkgs.obs-studio-plugins.obs-vaapi pkgs.obs-studio-plugins.obs-vkcapture ]; })
+    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
     (import ./../scripts/emopicker9000.nix { inherit pkgs; })
     (import ./../scripts/task-waybar.nix { inherit pkgs; })

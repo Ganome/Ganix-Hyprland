@@ -12,5 +12,6 @@ lib.mkIf ("${gpuType}" == "amd") {
     ## amdvlk: an open-source Vulkan driver from AMD
     extraPackages = [ pkgs.amdvlk ];
     extraPackages32 = [ pkgs.driversi686Linux.amdvlk ];
+    driSupport32Bit = true;
   };
 }

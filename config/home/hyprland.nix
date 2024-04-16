@@ -127,6 +127,9 @@ in with lib; {
       exec-once = nm-applet --indicator
       exec-once = swayidle -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'
 
+      # Bluetooth
+      exec-once = blueman-appler
+
       #Clipboard history with Super+V
       exec-once = wl-paste --type text --watch cliphist store 
       exec-once = wl-paste --type image --watch cliphist store
