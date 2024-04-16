@@ -77,6 +77,5 @@ in {
     192.168.0.64  gentop.ganomehome.com   gentop
     '';
 
-
   system.stateVersion = "23.11";
 }

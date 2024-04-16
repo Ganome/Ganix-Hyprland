@@ -9,7 +9,7 @@ in {
     pkgs."${browser}" webcord-vencord libvirt swww grim grimblast slurp gnome.file-roller
     swaynotificationcenter rofi-wayland imv transmission-gtk mpv
     gimp obs-studio rustup audacity pavucontrol tree protonup-qt
-    spotify swayidle neovide swaylock quasselClient helvum
+    spotify swayidle neovide swaylock quasselClient helvum tldr
     asciiquarium-transparent cmatrix geany cliphist font-awesome
 #    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
