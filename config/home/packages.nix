@@ -11,7 +11,7 @@ in {
     gimp obs-studio rustup audacity pavucontrol tree protonup-qt
     spotify swayidle neovide swaylock quasselClient helvum tldr
     asciiquarium-transparent cmatrix geany cliphist font-awesome
-    dtach sxiv lsof wofi fortune cpu-x
+    dtach sxiv lsof wofi fortune cpu-x mangohud
 #    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
     (import ./../scripts/emopicker9000.nix { inherit pkgs; })

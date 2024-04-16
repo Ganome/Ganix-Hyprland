@@ -29,7 +29,9 @@ in with lib; {
         }
       }
 
-      monitor=,preferred,auto,1
+      monitor=DP-1,1920x1080@120,0x0,1 #120hz refresh rate on DP-1 - "hyprctl monitors"
+      monitor=HDMI-A-1, 1920x1080@60, 1920x0, 1 #60hz on HDMI-A-1
+      #monitor=,preferred,auto,1
       ${extraMonitorSettings}
       general {
         gaps_in = 6
