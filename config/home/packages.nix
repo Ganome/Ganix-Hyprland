@@ -9,9 +9,9 @@ in {
     pkgs."${browser}" webcord-vencord libvirt swww grim grimblast slurp gnome.file-roller
     swaynotificationcenter rofi-wayland imv transmission-gtk mpv
     gimp obs-studio rustup audacity pavucontrol tree protonup-qt
-    font-awesome spotify swayidle neovide swaylock quasselClient helvum
-    asciiquarium-transparent cmatrix geany
-    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    spotify swayidle neovide swaylock quasselClient helvum
+    asciiquarium-transparent cmatrix geany cliphist font-awesome
+#    (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
     (import ./../scripts/emopicker9000.nix { inherit pkgs; })
     (import ./../scripts/task-waybar.nix { inherit pkgs; })

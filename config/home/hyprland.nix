@@ -156,8 +156,8 @@ in with lib; {
       bind = ${modifier}SHIFT,E,exit,
       
       #Waybar
-      bind = ${modifier}, B, exec, pkill --signal 10 waybar
-      bind = ${modifier}SHIFT, B, exec, /usr/local/bin/reset-waybar
+      bind = ${modifier}, B, exec, pkill -10 waybar
+      bind = ${modifier}SHIFT, B, exec, $HOME/.local/bin/reset-waybar
 
       # Special Workspaces - like scrathpad, but singular
       bind = ${modifier}SHIFT,MINUS,movetoworkspace,special

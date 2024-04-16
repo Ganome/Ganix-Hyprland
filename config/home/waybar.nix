@@ -18,12 +18,37 @@ in with lib; {
       modules-right = [ "custom/hyprbindings" "custom/exit" "idle_inhibitor" "custom/themeselector" "custom/notification" "battery" "tray" ];
 
       "hyprland/workspaces" = {
-      	format = if bar-number == true then "{name}" else "{icon}";
-      	format-icons = {
-          default = " ";
-          active = " ";
-          urgent = " ";
-      	};
+         format = if bar-number == false then "{name}" else "{icon}";
+               "format-icons" = {
+            "1" = "";
+             "2" = "2";
+             "3" = "";
+             "4" = "4";
+             "5" = "";
+             "6" = "";
+             "7" = "";
+             "8" = "8";
+             "9" = "";
+             "0" = "";
+             "11" = "";
+             "12" = "2";
+             "13" = "";
+             "14" = "4";
+             "15" = "";
+             "16" = "";
+             "17" = "";
+             "18" = "8";
+             "19" = "";
+             "20" = "";
+             urgent = "<U+F06A>";
+             focused = "<U+F192>";
+             default = "<U+F111>";
+         };
+      #	format-icons = {
+      #    default = " ";
+      #    active = " ";
+      #    urgent = " ";
+      #	};
       	on-scroll-up = "hyprctl dispatch workspace e+1";
       	on-scroll-down = "hyprctl dispatch workspace e-1";
       };
@@ -143,8 +168,8 @@ in with lib; {
     }];
     style = concatStrings [''
       * {
-	font-size: 16px;
-	font-family: JetBrainsMono Nerd Font, Font Awesome, sans-serif;
+        font-size: 16px;
+	font-family: NotoSansM Nerd Font, JetBrainsMono Nerd Font, sans-serif;
     	font-weight: bold;
       }
       window#waybar {
