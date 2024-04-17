@@ -17,6 +17,7 @@ in {
 
   # Enable networking
   networking.hostName = "${hostname}"; # Define your hostname
+  #networking.hostName = "nixtop";  # This line so that laptop will build with a different hostname
   networking.domain = "ganomehome.com";
   networking.networkmanager.enable = true;
 
@@ -74,7 +75,7 @@ in {
     192.168.0.16  truenas.ganomehome.com  truenas
     192.168.0.100 beefypi.ganomehome.com  beefypi
     192.168.0.123 irc.ganomehome.com      irc
-    192.168.0.64  gentop.ganomehome.com   gentop
+    192.168.0.64  nixtop.ganomehome.com   nixtop
     '';
 
   system.stateVersion = "23.11";

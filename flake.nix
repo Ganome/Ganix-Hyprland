@@ -29,10 +29,10 @@
   };
 
   outputs = inputs@{ nixpkgs, home-manager, impermanence, split-monitor-workspaces, ... }:
-  let
-    host = "ganix";
+  let 
     system = "x86_64-linux";
     inherit (import ./hosts/${host}/options.nix) username hostname;
+    host = "nixtop";
 
     pkgs = import nixpkgs {
       inherit system;
