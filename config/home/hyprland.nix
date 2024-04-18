@@ -125,6 +125,7 @@ in with lib; {
       exec-once = swaync
       exec-once = wallsetter
       exec-once = nm-applet --indicator
+      exec-once = hyprctl dispatch focusmonitor DP-1
       exec-once = swayidle -w timeout 720 'swaylock -f' timeout 800 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on' before-sleep 'swaylock -f -c 000000'
 
       # Bluetooth
