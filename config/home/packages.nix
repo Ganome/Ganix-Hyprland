@@ -12,7 +12,7 @@ in {
     spotify swayidle neovide swaylock quasselClient helvum tldr
     asciiquarium-transparent cmatrix geany cliphist font-awesome
     dtach sxiv lsof wofi fortune mangohud cpu-x fuse amf-headers
-    mpd mpc-cli mpc-qt cifs-utils
+    mpd mpc-cli mpc-qt cifs-utils nmap burpsuite metasploit
     (pkgs.wrapOBS { plugins = [ pkgs.obs-studio-plugins.obs-vaapi pkgs.obs-studio-plugins.obs-vkcapture ]; })
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
