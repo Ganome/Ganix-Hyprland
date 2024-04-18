@@ -32,7 +32,7 @@
   let 
     system = "x86_64-linux";
     inherit (import ./hosts/${host}/options.nix) username hostname;
-    host = "nixtop";
+    host = "ganix";
 
     pkgs = import nixpkgs {
       inherit system;

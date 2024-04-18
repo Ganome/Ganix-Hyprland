@@ -11,7 +11,8 @@ in {
     gimp rustup audacity pavucontrol tree protonup-qt
     spotify swayidle neovide swaylock quasselClient helvum tldr
     asciiquarium-transparent cmatrix geany cliphist font-awesome
-    dtach sxiv lsof wofi fortune mangohud cpu-x fuse amf-headers 
+    dtach sxiv lsof wofi fortune mangohud cpu-x fuse amf-headers
+    mpd mpc-cli mpc-qt cifs-utils
     (pkgs.wrapOBS { plugins = [ pkgs.obs-studio-plugins.obs-vaapi pkgs.obs-studio-plugins.obs-vkcapture ]; })
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
