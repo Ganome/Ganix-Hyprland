@@ -15,6 +15,15 @@ in {
       ./users/users.nix
     ];
 
+  #Enable SSH Authorized Keys
+  users.users.${username}.openssh.authorizedKeys = {
+ #   keyFiles =[
+ #   /home/${username}/.ssh/authorized_keys
+ # ];
+  keys = [
+  "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDVHrhdDdSTpdbJidW0t6ShSM/pYctFUKViLsqgsTR6XHpETiCPOA5zrGkWnw1FPlHOZMiKrw88DjqIaeF5LlBV4NxBo6qAn72wJHvNkKKdAW3MeXpt26x2KAYXUtg4vAJHQ6SsG8To6EaksZGyIUpbTkVRcVUU726OxregVFTSgiZT22T3Xm/uIFTv4SxZv2Jm4ShUn48Pc1RSPTkbe9xEdCu7vOLdBLmeTPW9kN+/gR9lbuOg5YGXwRisKcDrkPCRpmlMYd9DdMvmMW1LM1dpuGYfSe85epon1J+4wuCxab3pxuCMmKzA06XuYvVCQxZyFh/KN1ZLpjaGIld0DIK8cwzhfhsbEmFCxm/GOH7EER2iof/VhDYmqYPCDq8frqT3PSjBawp+1B9/FDE49JeTFq8YNiQZr5kv2zMHkQ8LT5m1JPVPS66YHDcCsvjmh3OB8vpIpA4X+F+yRZWKkBdE0tviqhj04p2IyZN5sKSsDryikur9M98MFgCzrcNBo/JabKlIu3K5DOEWe91sFbi3GbBFsIYgILSyNQK0AD3zTCSfcgbCQ66g+k1xDPKR9lq972kir/fwPmUipTQpc4MJbeHCtcoIBeO60eMFS2GIDAacRSj5ul2IwQmK10XZNY2C/v93JoDJLh0SVK6XOdTTmtJqVwVPdBbQtS/fruJojw== Ganome's RSA Key"
+  ];
+};
   # Enable networking
   networking.hostName = "${hostname}"; # Define your hostname
   #networking.hostName = "nixtop";  # This line so that laptop will build with a different hostname

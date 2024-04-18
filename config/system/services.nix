@@ -3,6 +3,7 @@
 {
   # List services that you want to enable:
   services.openssh.enable = true;
+  services.openssh.settings.PasswordAuthentication = false;
   services.fstrim.enable = true;
   xdg.portal = {
     enable = true;

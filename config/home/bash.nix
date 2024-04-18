@@ -1,9 +1,9 @@
-{ config, lib, pkgs, host, ... }:
+{ config, lib, pkgs, host, username, ... }:
 
 let inherit (import ../../hosts/${host}/options.nix) flakeDir flakePrev 
 	     hostname flakeBackup theShell; in
 lib.mkIf (theShell == "bash") {
-  # Configure Bash
+ # Configure Bash
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -39,3 +39,5 @@ lib.mkIf (theShell == "bash") {
     };
   };
 }
+
+
