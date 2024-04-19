@@ -14,6 +14,7 @@ in {
     dtach sxiv lsof wofi fortune mangohud cpu-x fuse amf-headers
     mpd mpc-cli mpc-qt cifs-utils nmap burpsuite metasploit
     heroic-unwrapped prismlauncher-qt5 jdk17 cava vim wgetpaste
+    wireshark rPackages.sherlock
     (pkgs.wrapOBS { plugins = [ pkgs.obs-studio-plugins.obs-vaapi pkgs.obs-studio-plugins.obs-vkcapture ]; })
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
