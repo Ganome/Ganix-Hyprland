@@ -190,8 +190,10 @@ in with lib; {
       bind = ${modifier}SHIFT,8,split-movetoworkspace,8
       bind = ${modifier}SHIFT,9,split-movetoworkspace,9
       bind = ${modifier}SHIFT,0,split-movetoworkspace,10
-      bind = ${modifier}SUPERCTRL, right, split-changemonitor, next #Move active workspace to other monitor
-      bind = ${modifier}SUPERCTRL, left, split-changemonitor, prev
+      bind = ${modifier}SHIFT, right, split-changemonitor, next #Move active workspace to other monitor
+      bind = ${modifier}SHIFT, left, split-changemonitor, prev
+      bind = SHIFTCTRL, right, focusmonitor, +1 #Switch monitor focus
+      bind = SHIFTCTRL, left, focusmonitor, -1 #Switch monitor focus
       bind = ${modifier},mouse_down,workspace, e+1
       bind = ${modifier},mouse_up,workspace, e-1
       bindm = ${modifier},mouse:272,movewindow

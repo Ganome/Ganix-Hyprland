@@ -15,7 +15,8 @@ theKBDLayout theSecondKBDLayout; in
       autoNumlock = true;
       wayland.enable = true;
 #      theme = "tokyo-night-sddm";
-      theme = "sddm-sugar-dark-theme";
+#      theme = "sddm-sugar-dark-theme";
+       theme = "sddm-zust";
     };
   };
 
@@ -23,13 +24,11 @@ theKBDLayout theSecondKBDLayout; in
 let
     sugar = pkgs.callPackage ../pkgs/sddm-sugar-dark.nix {};
     tokyo-night = pkgs.libsForQt5.callPackage ../pkgs/sddm-tokyo-night.nix {};
-#    zust = pkgs.libsForQt5.callPackage ../pkgs/sddm-zust.nix{}; #broken
-    chili = pkgs.libsForQt5.callPackage ../pkgs.sddm-chili.nixP{}; #Testing
+    zust = pkgs.libsForQt5.callPackage ../pkgs/sddm-zust.nix{}; #broken
 in [ 
     sugar.sddm-sugar-dark # Name: sugar-dark
     tokyo-night # Name: tokyo-night-sddm
-    chili
-#    zust #Name: sddm-zust
+    zust #Name: sddm-zust
     pkgs.libsForQt5.qt5.qtgraphicaleffects
   ];
 }
