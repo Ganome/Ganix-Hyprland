@@ -15,6 +15,17 @@
       pkgs.xdg-desktop-portal
     ];
   };
+  # ClamAV
+  services.clamav = {
+    scanner.enable = true;
+    updater.enable = true;
+    daemon.enable = true;
+    #updater.settings = [
+      #DatabaseOwner = "ganome";
+      #  
+      #];
+    updater.interval = "weekly";
+  };
   services.pipewire = {
     enable = true;
     alsa.enable = true;

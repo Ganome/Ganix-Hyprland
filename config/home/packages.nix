@@ -11,10 +11,11 @@ in {
     gimp rustup audacity pavucontrol tree protonup-qt
     spotify swayidle neovide swaylock quasselClient helvum tldr
     asciiquarium-transparent cmatrix geany cliphist font-awesome
-    dtach sxiv lsof wofi fortune mangohud cpu-x fuse amf-headers
+    dtach sxiv lsof wofi fortune mangohud fuse amf-headers
     mpd mpc-cli mpc-qt cifs-utils nmap burpsuite metasploit
     heroic-unwrapped prismlauncher-qt5 jdk17 cava vim wgetpaste
-    wireshark sherlock rPackages.sherlock zeroad 
+    wireshark sherlock rPackages.sherlock zeroad chkrootkit
+    clamav p7zip
     (pkgs.wrapOBS { plugins = [ pkgs.obs-studio-plugins.obs-vaapi pkgs.obs-studio-plugins.obs-vkcapture ]; })
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts
