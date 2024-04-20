@@ -10,7 +10,9 @@ theKBDLayout theSecondKBDLayout; in
       layout = "${theKBDLayout}, ${theSecondKBDLayout}";
     };
     libinput.enable = true;
-    displayManager.sddm = {
+  };
+  services.displayManager = {
+    sddm = {
       enable = true;
       autoNumlock = true;
       wayland.enable = true;
@@ -19,6 +21,7 @@ theKBDLayout theSecondKBDLayout; in
 #       theme = "sddm-zust";
       theme = "sddm-chili";
     };
+
   };
 
   environment.systemPackages =
