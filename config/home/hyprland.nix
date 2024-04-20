@@ -117,7 +117,7 @@ in with lib; {
           color = rgba(${theme.base0A}ff)
         }
       }
-      exec-once = $POLKIT_BIN
+      #exec-once = $POLKIT_BIN #Leave this commented out - because POLKIT is already a user level systemd service, and you cant/need have two running
       exec-once = dbus-update-activation-environment --systemd --all
       exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
       exec-once = swww init
@@ -192,8 +192,8 @@ in with lib; {
       bind = ${modifier}SHIFT,0,split-movetoworkspace,10
       bind = ${modifier}SHIFT, right, split-changemonitor, next #Move active workspace to other monitor
       bind = ${modifier}SHIFT, left, split-changemonitor, prev
-      bind = SHIFTCTRL, right, focusmonitor, +1 #Switch monitor focus
-      bind = SHIFTCTRL, left, focusmonitor, -1 #Switch monitor focus
+      bind = ALTCTRL, right, focusmonitor, +1 #Switch monitor focus
+      bind = ALTCTRL, left, focusmonitor, -1 #Switch monitor focus
       bind = ${modifier},mouse_down,workspace, e+1
       bind = ${modifier},mouse_up,workspace, e-1
       bindm = ${modifier},mouse:272,movewindow
