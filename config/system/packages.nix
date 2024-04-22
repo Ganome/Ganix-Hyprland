@@ -13,6 +13,7 @@
     noto-fonts-color-emoji material-icons brightnessctl
     toybox virt-viewer swappy ripgrep appimage-run 
     networkmanagerapplet yad playerctl nh grub2
+    rocmPackages.rocm-runtime virtualbox
   ];
 
   programs = {

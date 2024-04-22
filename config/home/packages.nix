@@ -14,8 +14,9 @@ in {
     dtach sxiv lsof wofi fortune mangohud fuse
     mpd mpc-cli mpc-qt cifs-utils nmap burpsuite metasploit
     heroic-unwrapped prismlauncher-qt5 jdk17 cava vim wgetpaste
-    wireshark sherlock rPackages.sherlock zeroad chkrootkit
-    clamav p7zip gnome.gnome-system-monitor
+    wireshark sherlock rPackages.sherlock zeroad chkrootkit ntfs3g
+    clamav p7zip gnome.gnome-system-monitor hashcat hashcat-utils
+    vagrant fcrackzip john
     (pkgs.wrapOBS { plugins = [ pkgs.obs-studio-plugins.obs-vaapi pkgs.obs-studio-plugins.obs-vkcapture ]; })
     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     # Import Scripts

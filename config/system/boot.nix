@@ -9,6 +9,7 @@
   boot.loader.grub.default = "saved";
   boot.loader.grub.device = "nodev";
   boot.loader.grub.useOSProber = true;
+  boot.supportedFilesystems = [ "ntfs" ];
   boot.kernel.sysctl = { "vm.max_map_count" = 2147483642; };
   boot.tmp.useTmpfs = false;
   boot.tmp.tmpfsSize = "25%";

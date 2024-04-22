@@ -33,6 +33,9 @@ in {
   # Set your time zone
   time.timeZone = "${theTimezone}";
 
+  # Enable Docker
+  virtualisation.docker.enable = true;
+
   # Select internationalisation properties
   i18n.defaultLocale = "${theLocale}";
   i18n.extraLocaleSettings = {
